@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Montserrat", sans-serif; */
+}
+nav {
+  display: flex; /*Next to each other */
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: black; /* #5d4954;*/
+  font-family: "Saira Condensed", sans-serif;
+}
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.logo img {
+  height: 50px;
+}
+.navlinks {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+.navlinks li {
+  list-style: none;
+}
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.navlinks a:hover {
+  color: red;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: red;
+  margin: 5px;
+  transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 900px) {
+  .navlinks {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    /* eliminates the scroll */
+  }
+  .navlinks {
+    position: absolute; /*relative to parent div*/
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navlinks li {
+    opacity: 100;
+  }
+  .burger {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.logo:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: url(./images/background.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0.5)),
+    url("./images/background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*NAV BAR ENDS HERE */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  background-color: none;
+  position: absolute;
+  right: 7%;
+  height: 40vh;
+  width: 30vw;
+  top: 15vh;
+  z-index: -1;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 40%;
+  /* padding: 0 10px; */
+  background-color: black;
+  width: 80%;
+  height: 40%;
+  /* margin: 3%; */
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.column img {
+  /* margin-top: 8px; */
+  /* vertical-align: middle; */
+  width: 30%;
+  height: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  top: 30%;
+}
+#column1:hover,
+#column2:hover,
+#column3:hover,
+#column4:hover {
+  border-color: red;
+}
+.column h4 {
+  color: white;
+  font-family: "Saira Condensed", sans-serif;
+  position: relative;
+  text-align: center;
+  top: -55%;
+}
+.livestreamscreen {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  border: 2px solid white;
+  background-color: black;
+  position: absolute;
+  left: 7%;
+  height: 70vh;
+  width: 50vw;
+  top: 15vh;
+  z-index: -1;
+}
+.belowfirefighter {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  border: 2px solid white;
+  background-color: black;
+  position: absolute;
+  right: 7%;
+  height: 30vh;
+  width: 30vw;
+  top: 55vh;
+  z-index: -1;
+}
+.belowfirefighter ul li {
+  color: white;
+  font-family: "Saira Condensed", sans-serif;
+  position: relative;
+  list-style-type: none;
+
+  /* top: -55%; */
+}
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  border: 2px solid white;
+  background-color: black;
+  position: absolute;
+  left: 7%;
+  height: 10vh;
+  width: 50vw;
+  top: 88vh;
+  z-index: -1;
+}
+.weather h4 {
+  color: white;
+  font-family: "Saira Condensed", sans-serif;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fa-wifi,
+.fa-user,
+.fa-tachometer-alt,
+.fa-battery-full,
+.fa-cloud-sun,
+.fa-map-marker-alt {
+  color: white;
+  font-size: 80%;
+}
