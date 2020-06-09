@@ -3,6 +3,22 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Montserrat", sans-serif; */
+  /* background-color: black; */
+}
+.bodyclass {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),
+    url("./images/background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* position: absolute; */
+  /* left: 0;
+  top: 0; */
+  /* background-repeat: repeat; */
 }
 nav {
   display: flex; /*Next to each other */
@@ -19,7 +35,7 @@ nav {
   font-size: 20px;
 }
 .logo img {
-  height: 50px;
+  height: 45px;
 }
 .navlinks {
   display: flex;
@@ -52,61 +68,7 @@ nav {
   transition: all 0.3 ease;
 }
 
-@media screen and (max-width: 900px) {
-  .navlinks {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-    /* eliminates the scroll */
-  }
-  .navlinks {
-    position: absolute; /*relative to parent div*/
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-  .navlinks li {
-    opacity: 100;
-  }
-  .burger {
-    display: block;
-  }
-}
-.nav-active {
-  transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-.logo:before {
+/* .logo:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -114,28 +76,27 @@ nav {
   left: 0;
   top: 0;
   z-index: -1;
-  background: url(./images/background.jpg) no-repeat center center fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
     url("./images/background.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
+} */
+/* background: url(./images/background.jpg) no-repeat center center scroll; */
 /*NAV BAR ENDS HERE */
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  /* padding: 0 4px; */
   background-color: none;
   position: absolute;
   right: 7%;
   height: 40vh;
   width: 30vw;
   top: 15vh;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -143,16 +104,18 @@ nav {
   flex: 40%;
   /* padding: 0 10px; */
   background-color: black;
-  width: 80%;
+  width: 100%;
   height: 40%;
-  /* margin: 3%; */
+  margin: 0% 3%;
+  /* margin-block-end: ; */
+  /* margin-left: 2%; */
+  /* margin-right: 3%; */
   overflow: hidden;
   border: 2px solid white;
+  /* box-shadow: 4px 4px 14px #000; */
 }
 
 .column img {
-  /* margin-top: 8px; */
-  /* vertical-align: middle; */
   width: 30%;
   height: 60%;
   position: relative;
@@ -161,6 +124,8 @@ nav {
   display: block;
   top: 30%;
 }
+/* margin-top: 8px; */
+/* vertical-align: middle; */
 #column1:hover,
 #column2:hover,
 #column3:hover,
@@ -172,13 +137,14 @@ nav {
   font-family: "Saira Condensed", sans-serif;
   position: relative;
   text-align: center;
-  top: -55%;
+  top: -60%;
 }
 .livestreamscreen {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
   border: 2px solid white;
+  /* box-shadow: 4px 4px 14px #000; */
   background-color: black;
   position: absolute;
   left: 7%;
@@ -192,6 +158,7 @@ nav {
   flex-wrap: wrap;
   padding: 0 4px;
   border: 2px solid white;
+  /* box-shadow: 4px 4px 14px #000; */
   background-color: black;
   position: absolute;
   right: 7%;
@@ -208,11 +175,17 @@ nav {
 
   /* top: -55%; */
 }
-.weather {
+/* WEATHER  */
+/* WEATHER  */
+/* WEATHER  */
+/* WEATHER  */
+/* WEATHER  */
+
+.weatherdiv {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
   border: 2px solid white;
+  /* box-shadow: 4px 4px 14px #000; */
   background-color: black;
   position: absolute;
   left: 7%;
@@ -220,14 +193,162 @@ nav {
   width: 50vw;
   top: 88vh;
   z-index: -1;
+
+  /* justify-content: space-between; */
 }
-.weather h4 {
-  color: white;
-  font-family: "Saira Condensed", sans-serif;
+.gridwls {
+  flex: 40%;
+  background-color: none;
+  width: 100%;
+  height: 40%;
+  margin: 0% 3%;
+  overflow: hidden;
+  /* border: 2px solid white; */
+}
+.gridwls h4 {
+  width: fit-content;
+  height: min-content;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  color: white;
+  font-family: "Saira Condensed", sans-serif;
+  /* background-color: red; */
 }
+.gridwls h6 {
+  display: none;
+}
+.gridwls input {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 40%;
+  padding: 1.4% 1%;
+  border: none;
+  outline: none;
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+
+  color: #313131;
+  font-size: 11px;
+  font-weight: 300;
+  font-family: "Saira Condensed", sans-serif;
+  transition: 0.2s ease-out;
+}
+
+.weatherapp {
+  flex: 10%;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+  /* margin: 0% 3%; */
+  overflow: visible;
+  /* border: 2px solid white; */
+  /* position: absolute; */
+  /* display: flex; */
+  transform: translateY(-80%);
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weatherapp .city {
+  /* position: relative;
+  margin-left: 2%;
+  display: flex;
+  width: 40%;
+  color: #fff;
+  font-family: "Saira Condensed", sans-serif; */
+  /* background-color: red; */
+  display: none;
+}
+.weatherapp .date {
+  /* color: #fff;
+  margin-left: 2%;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 80%; */
+  /* background-color: blue; */
+  display: none;
+}
+
+.weatherapp .temp {
+  color: #fff;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 80%;
+  /* margin-right: auto; */
+  /* display: flex; */
+  /* width: 40%; */
+  width: fit-content;
+  /* background-color: red; */
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /* right: 50%; */
+  /* bottom: 10%; */
+}
+
+.weatherapp .weather {
+  color: #fff;
+  font-family: "Saira Condensed", sans-serif;
+
+  /* background-color: blue; */
+  position: relative;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* display: flex; */
+  width: fit-content;
+  /* top: 0%; */
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+}
+
+.weatherapp .icon {
+  width: 40%;
+  /* height: 40%; */
+  position: absolute;
+  display: block;
+  /* top: -5%; */
+  /* left: -75%; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* display: block; */
+  /* left: 50%; */
+  /* top: 99vh;  */
+  /* background-color: green; */
+  /* overflow: hidden; */
+  z-index: -1;
+  /* margin-left: auto;
+  margin-right: auto;
+  display: block; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  margin-left: -75%;
+  /* top: 35%; */
+}
+.weatherapp .icon img {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /* top: 30%; */
+}
+.weatherapp h6,
+.weatherapp h6 {
+  display: none;
+}
+
 .fa-wifi,
 .fa-user,
 .fa-tachometer-alt,
@@ -236,4 +357,242 @@ nav {
 .fa-map-marker-alt {
   color: white;
   font-size: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+    /* eliminates the scroll */
+  }
+  .navlinks {
+    position: absolute; /*relative to parent div*/
+    right: 0px;
+    height: 193vh;
+    top: 8vh;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 2;
+  }
+  .navlinks li {
+    opacity: 100;
+  }
+  .burger {
+    display: block;
+  }
+  .livestreamscreen {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 4px; */
+    border: 2px solid white;
+    /* box-shadow: 4px 4px 14px #000; */
+    background-color: black;
+    position: absolute;
+    left: 7%;
+    /* right: 7%; */
+    height: 70vh;
+    width: 84vw; /* should be 86 but scroll is 2% */
+    top: 15vh;
+    z-index: -1;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 4px; */
+    background-color: none;
+    position: absolute;
+    left: 23%;
+    height: 40vh;
+    width: 50vw;
+    top: 88vh;
+    z-index: 0;
+  }
+  .belowfirefighter {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    border: 2px solid white;
+    /* box-shadow: 4px 4px 14px #000; */
+    background-color: black;
+    position: absolute;
+    left: 23%;
+    height: 30vh;
+    width: 50vw;
+    top: 127vh;
+    z-index: 1;
+    /* margin-bottom: 5%; */
+  }
+  .weatherdiv {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    border: 2px solid white;
+    /* box-shadow: 4px 4px 14px #000; */
+    background-color: black;
+    position: absolute;
+    left: 7%;
+    height: 35vh;
+    width: 84vw;
+    top: 160vh;
+    z-index: -1;
+    margin-bottom: 5%;
+  }
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  /* BreAK  */
+  .gridwls {
+    flex: 40%;
+    background-color: none;
+    width: 100%;
+    height: 50%;
+    margin: 0% 3%;
+    overflow: hidden;
+    /* border: 2px solid white; */
+  }
+
+  .gridwls input {
+    top: 70%;
+  }
+
+  .weatherapp {
+    transform: translateY(-100%);
+    z-index: -2;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+  }
+  .weatherapp .city {
+    color: #fff;
+    font-family: "Saira Condensed", sans-serif;
+    text-align: center;
+    /* left: 50%; */
+    /* top: -20%; */
+    /* background-color: red; */
+    position: relative;
+    /* margin-left: 2%; */
+    /* display: flex; */
+    width: 100%;
+    /* position: absolute; */
+    /* text-align: center; */
+    display: block;
+    left: 50%;
+    bottom: 25%;
+  }
+
+  .weatherapp .date {
+    color: #fff;
+    font-family: "Saira Condensed", sans-serif;
+    text-align: center;
+    /* left: 50%; */
+    /* top: -20%; */
+    position: relative;
+    text-align: center;
+    display: block;
+    color: white;
+    text-align: center;
+    /* right: 50%; */
+    /* top: 40%; */
+    width: 100%;
+    left: 50%;
+    bottom: 25%;
+    /* background-color: blue; */
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .weatherapp .temp {
+    width: 100%;
+    /* right: 95%; */
+    top: 40%;
+
+    /* background-color: red; */
+    right: 50%;
+    /* margin: auto; */
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 22%;
+  }
+
+  .weatherapp .weather {
+    text-align: center;
+    right: 50%;
+    top: 40%;
+    width: 100%;
+    /* background-color: blue; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%;
+  }
+
+  .weatherapp .icon {
+    width: 50%;
+    /* height: 40%; */
+    /* right: 87%; */
+    /* top: -5%; */
+    /* margin-right: 180%; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    margin-left: -25%;
+    top: 35%;
+
+    /* background-color: green; */
+  }
+  .weatherapp .icon img {
+    width: 100%;
+    height: 90%;
+    top: 0%;
+  }
+}
+/* @media screen and (max-width: 900px) {
+  .navlinks {
+    width: 50%;
+  }
+} */
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

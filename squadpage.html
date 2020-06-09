@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squad 1 - FireStream</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c7af3cff20.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./newstyles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/browsericon.png"
+      sizes="32x32"
+    />
+  </head>
+  <body class="bodyclass">
+    <nav>
+      <div class="logo">
+        <!-- <h4>The Nav</h4> -->
+        <img src="./images/Banner_Saira_Font.png" alt="" />
+      </div>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="squad1.html" style="color: red;">Squad 1</a></li>
+        <li><a href="#">Squad 2 </a></li>
+        <li><a href="#">Recorded Footage </a></li>
+        <li><a href="#">About Us </a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <!-- NAV BAR ENDS HERE  -->
+    <div class="row">
+      <div class="column" id="column1">
+        <img src="./images/firefighter.png" alt="" />
+        <h4>Squad | Leader</h4>
+      </div>
+      <div class="column" id="column2">
+        <img src="./images/firefighter.png" alt="" />
+        <h4>Nishil Master</h4>
+      </div>
+      <div class="column" id="column3">
+        <img src="./images/firefighter.png" alt="" />
+        <h4>Nishil Master</h4>
+      </div>
+      <div class="column" id="column4">
+        <img src="./images/firefighter.png" alt="" />
+        <h4>Nishil Master</h4>
+      </div>
+    </div>
+    <div class="livestreamscreen"></div>
+    <div class="belowfirefighter">
+      <ul>
+        <li><i class="fas fa-user"></i> Device ID:</li>
+        <li><i class="fas fa-wifi"></i> Signal Strength:</li>
+        <li><i class="fas fa-tachometer-alt"></i> Network Speed:</li>
+        <li><i class="fas fa-battery-full"></i> Battery Life:</li>
+      </ul>
+    </div>
+    <div class="weatherdiv">
+
+        <div class="gridwls" id="gridwls1">
+          <h4 style="color:white;"><i class="fas fa-cloud-sun"></i> Weather</h4>
+        </div>
+        <div class="gridwls" id="gridwls2">
+          <h4 style="color:white;"><i class="fas fa-map-marker-alt"></i> Location</h4>
+        </div>
+        <div class="gridwls" id="gridwls3">
+        <input id="box" type="text" autocomplete="off" class="search-box" placeholder="Search " style="color:white;">
+        </div>
+        <div class="gridwls" id="gridwls4">
+        <h6 style="color:white;">hidden</h6>
+
+        </div>
+
+    <div class="weatherapp" id="weatherapp1">
+    <div class="city"> Toronto, ON</div>
+    <div class="date"> Monday, June 01 2020</div>
+    </div>
+    <div class="weatherapp" id="weatherapp2">
+      
+        <div class="weather">Sunny</div>
+        <div class="temp" id="temp1">15<span>°c<span></div>
+        
+      <div  class="icon"><img id="wicon" src="http://openweathermap.org/img/wn/11d@2x.png" alt="Weather icon"></div>
+    </div>
+    <div class="weatherapp" id="weatherapp3">
+      <h6 style="color:white;">hidden</h6>
+    </div>
+    <div class="weatherapp" id="weatherapp4">
+    <h6 style="color:white;">hidden</h6>
+    </div>
+
+
+    </div>
+    <script src="./app.js"></script>
+    <script src="./weatherappmain.js"></script>
+
+  </body>
+</html>
